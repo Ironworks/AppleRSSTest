@@ -12,7 +12,8 @@
 		F077B19B2158353A0019C351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F077B1992158353A0019C351 /* Main.storyboard */; };
 		F077B19D215835400019C351 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F077B19C215835400019C351 /* Assets.xcassets */; };
 		F077B1A0215835400019C351 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F077B19E215835400019C351 /* LaunchScreen.storyboard */; };
-		F077B1AB215835410019C351 /* AppleRSSTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1AA215835410019C351 /* AppleRSSTestTests.swift */; };
+		F077B1B7215836800019C351 /* RSSDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1B6215836800019C351 /* RSSDataService.swift */; };
+		F077B1B9215836B30019C351 /* RSSDAtaServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1B8215836B30019C351 /* RSSDAtaServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +35,9 @@
 		F077B19F215835400019C351 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F077B1A1215835400019C351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F077B1A6215835410019C351 /* AppleRSSTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleRSSTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F077B1AA215835410019C351 /* AppleRSSTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleRSSTestTests.swift; sourceTree = "<group>"; };
 		F077B1AC215835410019C351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F077B1B6215836800019C351 /* RSSDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSDataService.swift; sourceTree = "<group>"; };
+		F077B1B8215836B30019C351 /* RSSDAtaServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSDAtaServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		F077B1942158353A0019C351 /* AppleRSSTest */ = {
 			isa = PBXGroup;
 			children = (
+				F077B1B5215836580019C351 /* Services */,
 				F077B1952158353A0019C351 /* AppDelegate.swift */,
 				F077B1972158353A0019C351 /* ViewController.swift */,
 				F077B1992158353A0019C351 /* Main.storyboard */,
@@ -90,10 +93,18 @@
 		F077B1A9215835410019C351 /* AppleRSSTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				F077B1AA215835410019C351 /* AppleRSSTestTests.swift */,
 				F077B1AC215835410019C351 /* Info.plist */,
+				F077B1B8215836B30019C351 /* RSSDAtaServiceTests.swift */,
 			);
 			path = AppleRSSTestTests;
+			sourceTree = "<group>";
+		};
+		F077B1B5215836580019C351 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F077B1B6215836800019C351 /* RSSDataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 					};
 					F077B1A5215835410019C351 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 						TestTargetID = F077B1912158353A0019C351;
 					};
 				};
@@ -198,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F077B1982158353A0019C351 /* ViewController.swift in Sources */,
+				F077B1B7215836800019C351 /* RSSDataService.swift in Sources */,
 				F077B1962158353A0019C351 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F077B1AB215835410019C351 /* AppleRSSTestTests.swift in Sources */,
+				F077B1B9215836B30019C351 /* RSSDAtaServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +410,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7ERH955JW;
 				INFOPLIST_FILE = AppleRSSTestTests/Info.plist;
@@ -407,6 +421,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.ironworksmedialimited.AppleRSSTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppleRSSTest.app/AppleRSSTest";
@@ -418,6 +433,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7ERH955JW;
 				INFOPLIST_FILE = AppleRSSTestTests/Info.plist;
