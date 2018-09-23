@@ -12,8 +12,8 @@
 		F077B19B2158353A0019C351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F077B1992158353A0019C351 /* Main.storyboard */; };
 		F077B19D215835400019C351 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F077B19C215835400019C351 /* Assets.xcassets */; };
 		F077B1A0215835400019C351 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F077B19E215835400019C351 /* LaunchScreen.storyboard */; };
-		F077B1B7215836800019C351 /* RSSDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1B6215836800019C351 /* RSSDataService.swift */; };
-		F077B1B9215836B30019C351 /* RSSDAtaServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1B8215836B30019C351 /* RSSDAtaServiceTests.swift */; };
+		F077B1BB21583E7F0019C351 /* GetRSSFeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1BA21583E7F0019C351 /* GetRSSFeedService.swift */; };
+		F077B1BF21583EBD0019C351 /* GetRSSFeedServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1BE21583EBD0019C351 /* GetRSSFeedServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +36,8 @@
 		F077B1A1215835400019C351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F077B1A6215835410019C351 /* AppleRSSTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleRSSTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F077B1AC215835410019C351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F077B1B6215836800019C351 /* RSSDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSDataService.swift; sourceTree = "<group>"; };
-		F077B1B8215836B30019C351 /* RSSDAtaServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSDAtaServiceTests.swift; sourceTree = "<group>"; };
+		F077B1BA21583E7F0019C351 /* GetRSSFeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRSSFeedService.swift; sourceTree = "<group>"; };
+		F077B1BE21583EBD0019C351 /* GetRSSFeedServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRSSFeedServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				F077B1AC215835410019C351 /* Info.plist */,
-				F077B1B8215836B30019C351 /* RSSDAtaServiceTests.swift */,
+				F077B1BE21583EBD0019C351 /* GetRSSFeedServiceTests.swift */,
 			);
 			path = AppleRSSTestTests;
 			sourceTree = "<group>";
@@ -102,7 +102,7 @@
 		F077B1B5215836580019C351 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				F077B1B6215836800019C351 /* RSSDataService.swift */,
+				F077B1BA21583E7F0019C351 /* GetRSSFeedService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F077B1982158353A0019C351 /* ViewController.swift in Sources */,
-				F077B1B7215836800019C351 /* RSSDataService.swift in Sources */,
+				F077B1BB21583E7F0019C351 /* GetRSSFeedService.swift in Sources */,
 				F077B1962158353A0019C351 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F077B1B9215836B30019C351 /* RSSDAtaServiceTests.swift in Sources */,
+				F077B1BF21583EBD0019C351 /* GetRSSFeedServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
