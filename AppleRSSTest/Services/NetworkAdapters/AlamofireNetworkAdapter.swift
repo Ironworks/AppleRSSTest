@@ -9,9 +9,10 @@
 import Alamofire
 
 public class AlamofireNetworkAdapter: NetworkAdapter {
-    func get(completionHandler: @escaping CompletionHandler) {
+    
+    func get(url: URL, completionHandler: @escaping CompletionHandler) {
         
-        Alamofire.request((URL(string: "") ?? nil)!).responseJSON { response in
+        Alamofire.request(url).responseJSON { response in
             
             switch response.result {
             case .success(_):

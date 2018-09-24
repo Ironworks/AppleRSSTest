@@ -76,22 +76,26 @@ class GetRSSFeedServiceTests: XCTestCase {
 let successfulResponse = Response.success(Data())
 let error = NSError(domain: "X", code: 123, userInfo: nil)
 let unsuccessfulResponse = Response<JsonData>.failure(NSError(domain: "com.ironworksMediaLimited", code: 100, userInfo: nil))
-class MockSuccessfulNetworkAdapter: NetworkAdapter {
 
+
+class MockSuccessfulNetworkAdapter: NetworkAdapter {
+  
     var getWasCalled = false
  
-    func get(completionHandler: @escaping CompletionHandler) {
+    func get(url: URL, completionHandler: @escaping CompletionHandler) {
         getWasCalled = true
         completionHandler(successfulResponse)
     
     }
+    
+
 }
 
 class MockUnSuccessfulNetworkAdapter: NetworkAdapter {
-    
+   
     var getWasCalled = false
     
-    func get(completionHandler: @escaping CompletionHandler) {
+    func get(url: URL, completionHandler: @escaping CompletionHandler) {
         getWasCalled = true
         completionHandler(unsuccessfulResponse)
         

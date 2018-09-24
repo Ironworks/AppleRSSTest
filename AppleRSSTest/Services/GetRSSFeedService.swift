@@ -17,7 +17,7 @@ public typealias JsonData = Data
 typealias CompletionHandler = (Response<JsonData>) -> ()
 
 protocol NetworkAdapter {
-    func get(completionHandler: @escaping CompletionHandler)
+    func get(url: URL, completionHandler: @escaping CompletionHandler)
 }
 
 class GetRSSFeedService {
@@ -31,6 +31,6 @@ class GetRSSFeedService {
     }
     
     func get(completionHandler: @escaping CompletionHandler) {
-        networkAdapter.get (completionHandler: completionHandler)
+        networkAdapter.get (url: url, completionHandler: completionHandler)
     }
 }
