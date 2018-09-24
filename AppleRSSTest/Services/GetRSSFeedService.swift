@@ -8,8 +8,20 @@
 
 import Foundation
 
+enum ErrorType {
+    case errorTypeHTTPFailure
+}
+
+enum Response<T> {
+    case success(T)
+    case failure(ErrorType)
+}
+
+typealias JsonData = Data
+typealias CompletionHandler = (Response<JsonData>) -> ()
+
 protocol NetworkAdapter {
-    func get()
+    func get(completionHandler: @escaping CompletionHandler)
 }
 
 class GetRSSFeedService {
@@ -22,4 +34,7 @@ class GetRSSFeedService {
         self.networkAdapter = networkAdapter
     }
     
+    func get(completionHandler: @escaping CompletionHandler) {
+        networkAdapter.get (completionHandler: completionHandler)
+    }
 }

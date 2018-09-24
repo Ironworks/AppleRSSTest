@@ -12,11 +12,11 @@ import XCTest
 class GetRSSFeedServiceTests: XCTestCase {
     
     var sut: GetRSSFeedService!
-    var mockNetworkAdapter: NetworkAdapter!
+    var mockNetworkAdapter: MockSuccessfulNetworkAdapter!
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        mockNetworkAdapter = MockNetworkAdapter()
+        mockNetworkAdapter = MockSuccessfulNetworkAdapter()
         sut = GetRSSFeedService(url: URL(string: "https://example.com")!, networkAdapter: mockNetworkAdapter)
     }
 
@@ -37,13 +37,61 @@ class GetRSSFeedServiceTests: XCTestCase {
         XCTAssertNotNil(sut.networkAdapter, "Should be able to set network adapter")
     }
     
+    func testCanReadFeed() {
+        
+        sut.get { response in
+            
+            switch response {
+            case .success(let data):
+                XCTAssertNotNil(data, "Response should not be nil")
+            case .failure(_):
+                XCTFail()
+            }
+        }
+        XCTAssert(mockNetworkAdapter.getWasCalled == true, "Should call get()")
+        
+    }
     
+    func testCanHandleError() {
+        let mockUnSuccessfulNetworkAdapter = MockUnSuccessfulNetworkAdapter()
+        sut = GetRSSFeedService(url: URL(string: "https://example.com")!, networkAdapter: mockUnSuccessfulNetworkAdapter)
+        
+        sut.get { response in
+            
+            switch response {
+            case .success(_):
+                XCTFail()
+            case .failure(let error):
+                XCTAssertNotNil(error)
+            }
+        }
+        XCTAssert(mockUnSuccessfulNetworkAdapter.getWasCalled == true, "Should call get()")
+        
+    }
 
 }
 
-class MockNetworkAdapter: NetworkAdapter {
+let successfulResponse = Response.success(Data())
+let error = NSError(domain: "X", code: 123, userInfo: nil)
+let unsuccessfulResponse = Response<JsonData>.failure(.errorTypeHTTPFailure)
+class MockSuccessfulNetworkAdapter: NetworkAdapter {
+
+    var getWasCalled = false
+ 
+    func get(completionHandler: @escaping CompletionHandler) {
+        getWasCalled = true
+        completionHandler(successfulResponse)
     
-    func get() {
+    }
+}
+
+class MockUnSuccessfulNetworkAdapter: NetworkAdapter {
+    
+    var getWasCalled = false
+    
+    func get(completionHandler: @escaping CompletionHandler) {
+        getWasCalled = true
+        completionHandler(unsuccessfulResponse)
         
     }
     
