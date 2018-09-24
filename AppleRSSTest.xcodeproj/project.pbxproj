@@ -16,6 +16,7 @@
 		F077B1A0215835400019C351 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F077B19E215835400019C351 /* LaunchScreen.storyboard */; };
 		F077B1BB21583E7F0019C351 /* GetRSSFeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1BA21583E7F0019C351 /* GetRSSFeedService.swift */; };
 		F077B1BF21583EBD0019C351 /* GetRSSFeedServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1BE21583EBD0019C351 /* GetRSSFeedServiceTests.swift */; };
+		F077B1C52158709C0019C351 /* AlamofireNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1C42158709C0019C351 /* AlamofireNetworkAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		F077B1AC215835410019C351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F077B1BA21583E7F0019C351 /* GetRSSFeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRSSFeedService.swift; sourceTree = "<group>"; };
 		F077B1BE21583EBD0019C351 /* GetRSSFeedServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRSSFeedServiceTests.swift; sourceTree = "<group>"; };
+		F077B1C42158709C0019C351 /* AlamofireNetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		F077B1942158353A0019C351 /* AppleRSSTest */ = {
 			isa = PBXGroup;
 			children = (
+				F077B1C021586CCA0019C351 /* Extensions */,
 				F077B1B5215836580019C351 /* Services */,
 				F077B1952158353A0019C351 /* AppDelegate.swift */,
 				F077B1972158353A0019C351 /* ViewController.swift */,
@@ -134,9 +137,25 @@
 		F077B1B5215836580019C351 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F077B1C32158707A0019C351 /* NetworkAdapters */,
 				F077B1BA21583E7F0019C351 /* GetRSSFeedService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		F077B1C021586CCA0019C351 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F077B1C32158707A0019C351 /* NetworkAdapters */ = {
+			isa = PBXGroup;
+			children = (
+				F077B1C42158709C0019C351 /* AlamofireNetworkAdapter.swift */,
+			);
+			path = NetworkAdapters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +323,7 @@
 				F077B1982158353A0019C351 /* ViewController.swift in Sources */,
 				F077B1BB21583E7F0019C351 /* GetRSSFeedService.swift in Sources */,
 				F077B1962158353A0019C351 /* AppDelegate.swift in Sources */,
+				F077B1C52158709C0019C351 /* AlamofireNetworkAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

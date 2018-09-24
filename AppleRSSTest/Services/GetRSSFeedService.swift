@@ -8,16 +8,12 @@
 
 import Foundation
 
-enum ErrorType {
-    case errorTypeHTTPFailure
-}
-
-enum Response<T> {
+public enum Response<T> {
     case success(T)
-    case failure(ErrorType)
+    case failure(Error)
 }
 
-typealias JsonData = Data
+public typealias JsonData = Data
 typealias CompletionHandler = (Response<JsonData>) -> ()
 
 protocol NetworkAdapter {

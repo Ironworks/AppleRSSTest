@@ -22,6 +22,8 @@ class GetRSSFeedServiceTests: XCTestCase {
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        mockNetworkAdapter = nil
+        sut = nil
     }
 
     func testCanCreateGetRSSFeedService() {
@@ -73,7 +75,7 @@ class GetRSSFeedServiceTests: XCTestCase {
 
 let successfulResponse = Response.success(Data())
 let error = NSError(domain: "X", code: 123, userInfo: nil)
-let unsuccessfulResponse = Response<JsonData>.failure(.errorTypeHTTPFailure)
+let unsuccessfulResponse = Response<JsonData>.failure(NSError(domain: "com.ironworksMediaLimited", code: 100, userInfo: nil))
 class MockSuccessfulNetworkAdapter: NetworkAdapter {
 
     var getWasCalled = false
