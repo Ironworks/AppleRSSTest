@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BFDF1E05FC11F4CAFDF5FF52 /* Pods_AppleRSSTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD4E0077ABE04AC193439A2 /* Pods_AppleRSSTest.framework */; };
 		DF4E7FD85CE255784227D972 /* Pods_AppleRSSTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD89F615785C1DC4F92A81C3 /* Pods_AppleRSSTestTests.framework */; };
+		F02CD1752158DC61003ED0C5 /* feedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02CD1742158DC61003ED0C5 /* feedModel.swift */; };
 		F077B1962158353A0019C351 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1952158353A0019C351 /* AppDelegate.swift */; };
 		F077B1982158353A0019C351 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1972158353A0019C351 /* ViewController.swift */; };
 		F077B19B2158353A0019C351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F077B1992158353A0019C351 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		8E557BB7AE4DFEB9DAC99A48 /* Pods-AppleRSSTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleRSSTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppleRSSTestTests/Pods-AppleRSSTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD89F615785C1DC4F92A81C3 /* Pods_AppleRSSTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleRSSTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE489D69D596F0A37E99358 /* Pods-AppleRSSTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleRSSTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppleRSSTest/Pods-AppleRSSTest.debug.xcconfig"; sourceTree = "<group>"; };
+		F02CD1742158DC61003ED0C5 /* feedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedModel.swift; sourceTree = "<group>"; };
 		F077B1922158353A0019C351 /* AppleRSSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleRSSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F077B1952158353A0019C351 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F077B1972158353A0019C351 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F02CD1732158DBE8003ED0C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F02CD1742158DC61003ED0C5 /* feedModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F077B1892158353A0019C351 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		F077B1942158353A0019C351 /* AppleRSSTest */ = {
 			isa = PBXGroup;
 			children = (
+				F02CD1732158DBE8003ED0C5 /* Models */,
 				F077B1C021586CCA0019C351 /* Extensions */,
 				F077B1B5215836580019C351 /* Services */,
 				F077B1952158353A0019C351 /* AppDelegate.swift */,
@@ -321,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F077B1982158353A0019C351 /* ViewController.swift in Sources */,
+				F02CD1752158DC61003ED0C5 /* feedModel.swift in Sources */,
 				F077B1BB21583E7F0019C351 /* GetRSSFeedService.swift in Sources */,
 				F077B1962158353A0019C351 /* AppDelegate.swift in Sources */,
 				F077B1C52158709C0019C351 /* AlamofireNetworkAdapter.swift in Sources */,
