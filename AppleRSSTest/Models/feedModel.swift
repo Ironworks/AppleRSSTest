@@ -28,6 +28,12 @@ struct Author: Codable {
 struct Link: Codable {
     let primary: String
     let alternate: String
+    
+    enum CodingKeys: String, CodingKey
+    {
+        case primary = "self"
+        case alternate
+    }
 }
 
 struct Result: Codable {
