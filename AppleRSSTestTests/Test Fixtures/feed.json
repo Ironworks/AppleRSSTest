@@ -1,0 +1,58 @@
+{
+    "feed":{
+        "title":"Top Films",
+        "id":"https://rss.itunes.apple.com/api/v1/gb/movies/top-movies/action-and-adventure/100/explicit.json",
+        "author":{
+            "name":"iTunes Store",
+            "uri":"http://wwww.apple.com/gb/itunes/"
+        },
+        "links":[
+            {
+                "self":"https://rss.itunes.apple.com/api/v1/gb/movies/top-movies/action-and-adventure/100/explicit.json"
+            },
+            {
+                "alternate":"https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewTop?genreId=4401\u0026popId=15"
+            }
+        ],
+        "copyright":"Copyright © 2018 Apple Inc. All rights reserved.",
+        "country":"gb",
+        "icon":"http://itunes.apple.com/favicon.ico",
+        "updated":"2018-09-22T04:35:01.000-07:00",
+        "results":[
+            {
+                "artistName":"Ron Howard",
+                "id":"1383590773",
+                "releaseDate":"2018-05-24",
+                "name":"Solo: A Star Wars Story",
+                "kind":"movie",
+                "copyright":"© 2018 Lucasfilm Ltd.",
+                "artworkUrl100":"https://is3-ssl.mzstatic.com/image/thumb/Video128/v4/17/36/0e/17360e85-c5d1-26ff-69c0-4239f22908d8/pr_source.lsr/200x200bb.png",
+                "genres":[
+                    {
+                        "genreId":"4401",
+                        "name":"Action \u0026 Adventure",
+                        "url":"https://itunes.apple.com/gb/genre/id4401"
+                    }
+                ],
+                "url":"https://itunes.apple.com/gb/movie/solo-a-star-wars-story/id1383590773"
+            },
+            {
+                "artistName":"David Leitch",
+                "id":"1383968944",
+                "releaseDate":"2018-05-18",
+                "name":"Deadpool 2",
+                "kind":"movie",
+                "copyright":"© 2018 Twentieth Century Fox Film Corporation. All rights reserved. MARVEL 2018 MARVEL",
+                "artworkUrl100":"https://is5-ssl.mzstatic.com/image/thumb/Video118/v4/83/9a/ec/839aece4-0268-ba17-9e9d-49579974af80/pr_source.lsr/200x200bb.png",
+                "genres":[
+                    {
+                        "genreId":"4401",
+                        "name":"Action \u0026 Adventure",
+                        "url":"https://itunes.apple.com/gb/genre/id4401"
+                    }
+                ],
+                "url":"https://itunes.apple.com/gb/movie/deadpool-2/id1383968944"
+            }
+        ]
+    }
+}

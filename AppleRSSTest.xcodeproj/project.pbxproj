@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BFDF1E05FC11F4CAFDF5FF52 /* Pods_AppleRSSTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD4E0077ABE04AC193439A2 /* Pods_AppleRSSTest.framework */; };
 		DF4E7FD85CE255784227D972 /* Pods_AppleRSSTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD89F615785C1DC4F92A81C3 /* Pods_AppleRSSTestTests.framework */; };
-		F02CD1752158DC61003ED0C5 /* feedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02CD1742158DC61003ED0C5 /* feedModel.swift */; };
+		F02CD1752158DC61003ED0C5 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02CD1742158DC61003ED0C5 /* FeedModel.swift */; };
 		F077B1962158353A0019C351 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1952158353A0019C351 /* AppDelegate.swift */; };
 		F077B1982158353A0019C351 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1972158353A0019C351 /* ViewController.swift */; };
 		F077B19B2158353A0019C351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F077B1992158353A0019C351 /* Main.storyboard */; };
@@ -18,6 +18,8 @@
 		F077B1BB21583E7F0019C351 /* GetRSSFeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1BA21583E7F0019C351 /* GetRSSFeedService.swift */; };
 		F077B1BF21583EBD0019C351 /* GetRSSFeedServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1BE21583EBD0019C351 /* GetRSSFeedServiceTests.swift */; };
 		F077B1C52158709C0019C351 /* AlamofireNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077B1C42158709C0019C351 /* AlamofireNetworkAdapter.swift */; };
+		F09067AD215C038A0031EE3E /* FeedModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09067AC215C038A0031EE3E /* FeedModelTests.swift */; };
+		F09067B0215C04930031EE3E /* feed.json in Resources */ = {isa = PBXBuildFile; fileRef = F09067AF215C04930031EE3E /* feed.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 		8E557BB7AE4DFEB9DAC99A48 /* Pods-AppleRSSTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleRSSTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppleRSSTestTests/Pods-AppleRSSTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD89F615785C1DC4F92A81C3 /* Pods_AppleRSSTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleRSSTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE489D69D596F0A37E99358 /* Pods-AppleRSSTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleRSSTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppleRSSTest/Pods-AppleRSSTest.debug.xcconfig"; sourceTree = "<group>"; };
-		F02CD1742158DC61003ED0C5 /* feedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedModel.swift; sourceTree = "<group>"; };
+		F02CD1742158DC61003ED0C5 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		F077B1922158353A0019C351 /* AppleRSSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleRSSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F077B1952158353A0019C351 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F077B1972158353A0019C351 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +52,8 @@
 		F077B1BA21583E7F0019C351 /* GetRSSFeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRSSFeedService.swift; sourceTree = "<group>"; };
 		F077B1BE21583EBD0019C351 /* GetRSSFeedServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRSSFeedServiceTests.swift; sourceTree = "<group>"; };
 		F077B1C42158709C0019C351 /* AlamofireNetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkAdapter.swift; sourceTree = "<group>"; };
+		F09067AC215C038A0031EE3E /* FeedModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModelTests.swift; sourceTree = "<group>"; };
+		F09067AF215C04930031EE3E /* feed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = feed.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +99,7 @@
 		F02CD1732158DBE8003ED0C5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F02CD1742158DC61003ED0C5 /* feedModel.swift */,
+				F02CD1742158DC61003ED0C5 /* FeedModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -139,8 +143,10 @@
 		F077B1A9215835410019C351 /* AppleRSSTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				F09067AE215C04350031EE3E /* Test Fixtures */,
 				F077B1AC215835410019C351 /* Info.plist */,
 				F077B1BE21583EBD0019C351 /* GetRSSFeedServiceTests.swift */,
+				F09067AC215C038A0031EE3E /* FeedModelTests.swift */,
 			);
 			path = AppleRSSTestTests;
 			sourceTree = "<group>";
@@ -167,6 +173,14 @@
 				F077B1C42158709C0019C351 /* AlamofireNetworkAdapter.swift */,
 			);
 			path = NetworkAdapters;
+			sourceTree = "<group>";
+		};
+		F09067AE215C04350031EE3E /* Test Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				F09067AF215C04930031EE3E /* feed.json */,
+			);
+			path = "Test Fixtures";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F09067B0215C04930031EE3E /* feed.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F077B1982158353A0019C351 /* ViewController.swift in Sources */,
-				F02CD1752158DC61003ED0C5 /* feedModel.swift in Sources */,
+				F02CD1752158DC61003ED0C5 /* FeedModel.swift in Sources */,
 				F077B1BB21583E7F0019C351 /* GetRSSFeedService.swift in Sources */,
 				F077B1962158353A0019C351 /* AppDelegate.swift in Sources */,
 				F077B1C52158709C0019C351 /* AlamofireNetworkAdapter.swift in Sources */,
@@ -344,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F077B1BF21583EBD0019C351 /* GetRSSFeedServiceTests.swift in Sources */,
+				F09067AD215C038A0031EE3E /* FeedModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

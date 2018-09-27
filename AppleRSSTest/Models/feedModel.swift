@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct feed: Codable {
+struct Top: Codable {
+    let feed: Feed
+}
+
+struct Feed: Codable {
     let title: String
     let id: String
     let author: Author
@@ -32,7 +36,7 @@ struct Link: Codable {
     enum CodingKeys: String, CodingKey
     {
         case primary = "self"
-        case alternate
+        case alternate = "alternate"
     }
 }
 
