@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct Top: Codable {
-    let feed: Feed
+struct ResponseBody: Decodable {
+    var feed: Feed
 }
 
-struct Feed: Codable {
-    let title: String
+struct Feed: Decodable {
+    var title: String
     let id: String
     let author: Author
     let links: [Link]
@@ -24,23 +24,33 @@ struct Feed: Codable {
     let results: [Result]
 }
 
-struct Author: Codable {
+struct Author: Decodable {
     let name: String
     let uri: String
 }
 
-struct Link: Codable {
-    let primary: String
-    let alternate: String
+struct Link: Decodable {
+    let link: String
     
-    enum CodingKeys: String, CodingKey
-    {
+    enum CodingKeys: String, CodingKey {
         case primary = "self"
         case alternate = "alternate"
     }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        
+        do {
+            link = try values.decode(String.self, forKey: .primary)
+        } catch {
+            do {
+                link = try values.decode(String.self, forKey: .alternate)
+            }
+        }
+    }
 }
 
-struct Result: Codable {
+struct Result: Decodable {
     let artistName: String
     let id: String
     let releaseDate: String
@@ -52,8 +62,8 @@ struct Result: Codable {
     let url: String
 }
 
-struct Genre: Codable {
-    let id: String
+struct Genre: Decodable {
+    let genreId: String
     let name: String
     let url: String
 }

@@ -21,25 +21,23 @@ class FeedModelTests: XCTestCase {
     
     func testCanReadFile () {
         let jsonData = jsonReader()
-        print(jsonData)
-        
 
-            //created the json decoder
-            let decoder = JSONDecoder()
-            
-            //using the array to put values
-        let feed  = try! decoder.decode(Top.self, from: jsonData)
-            print(feed)
+        let decoder = JSONDecoder()
         
+        do {
+            _  = try decoder.decode(ResponseBody.self, from: jsonData)
+        } catch {
+            XCTFail()
+        }
+        
+        XCTAssert(<#T##expression: Bool##Bool#>)
     }
     
     
     func jsonReader()  -> Data {
         let testBundle = Bundle(for: type(of: self))
         let fileURL = testBundle.url(forResource: "feed", withExtension: "json")
-        
         let jsonData = try! Data(contentsOf: fileURL!, options: .alwaysMapped)
-        
         return jsonData
     }
 
